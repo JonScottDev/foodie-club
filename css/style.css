@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffa77f;
+  --light-color: #e6f3f6;
+  --dark-color: #33494d;
+  --container-normal: 1100px;
+  --container-wide: 1400px;
+  --container-narrow: 900px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Utility Classes */
+.logo {
+  font-family: "Truculenta", sans-serif;
+  font-size: 3rem;
+  font-weight: semi-bold;
+  text-transform: uppercase;
+
+  span {
+    padding: 0 0.7rem;
+    background: var(--primary-color);
+  }
+}
+
+.bg-primary {
+  background: var(--primary-color);
+  padding: 0 0.7rem;
+  color: var(--light-color);
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  padding: 0 0.7rem;
+  color: var(--primary-color);
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid var(--dark-color);
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--dark-color);
+    color: var(--light-color);
+  }
+}
+
+/* Container Sizes */
+.container {
+  max-width: var(--container-normal);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-lg {
+  max-width: var(--container-wide);
+}
+
+.container-sm {
+  max-width: var(--container-narrow);
+}
+
+/* Header */
+.header {
+  margin: 1.5rem auto;
+}
+
+.header .header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .main-menu {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background: var(--primary-color);
+      color: var(--light-color);
+    }
+  }
+}
+
+.current {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+/* Hero */
+.hero {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+
+  span {
+    padding: 0 0.3rem;
+  }
+}
+
+/* Gallery */
+.gallery-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-item {
+  width: calc(33.333% - 20px);
+
+  img {
+    border-radius: 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* About */
+.bio {
+  padding: 3rem 0 4rem;
+}
+
+.bio-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.bio-item {
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.team {
+  padding: 3rem 0 4rem;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.team-flex {
+  display: flex;
+  gap: 1.4rem;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 0 4rem;
+
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  input,
+  textarea {
+    border: none;
+    border-bottom: 1px solid var(--dark-color);
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding-bottom: 1rem;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 0;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.form-group {
+  margin: 2rem 0;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #aaa;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    margin: 0.2rem;
+  }
+}
+
+.footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header .header-flex,
+  .bio .bio-flex,
+  .team .team-flex,
+  .footer .footer-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    height: 300px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .gallery-item {
+    width: calc(50% - 20px);
+  }
+
+  .footer .footer-flex {
+    text-align: center;
+  }
+}
