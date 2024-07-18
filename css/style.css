@@ -115,6 +115,7 @@ img {
 
 .header .main-menu {
   display: flex;
+  font-weight: 700;
   gap: 1rem;
 
   a {
