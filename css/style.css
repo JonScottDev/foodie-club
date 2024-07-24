@@ -306,6 +306,10 @@ img {
     grid-column: span 1;
   }
 
+  .gallery-item:nth-of-type(9) {
+    display: block;
+  }
+
   .footer .footer-flex {
     text-align: center;
   }
