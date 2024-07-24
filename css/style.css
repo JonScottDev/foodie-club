@@ -180,6 +180,10 @@ img {
     grid-column: span 2;
     grid-row: span 2;
   }
+
+  &:nth-of-type(9) {
+    display: none;
+  }
 }
 
 /* About */
